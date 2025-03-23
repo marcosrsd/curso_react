@@ -1,6 +1,7 @@
 import { HomeIcon } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Header from "../componentes/Header";
+import Footer from "../componentes/Footer";
 
 function TaskPage() {
   const [searchParams] = useSearchParams();
@@ -13,7 +14,7 @@ function TaskPage() {
   }
 
   return (
-    <div className="h-[800px] w-[1200px] bg-slate-500 p-6 space-y-5">
+    <div className="h-screen w-[1200px] bg-slate-500 p-6 space-y-5">
       <div className="space-y-4">
         <div className="flex justify-center relative">
           <button
@@ -31,6 +32,7 @@ function TaskPage() {
           <p className="text-slate-600">{description}</p>
         </div>
       </div>
+      <Footer>By MRS</Footer>
     </div>
   );
 }

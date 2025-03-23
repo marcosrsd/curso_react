@@ -4,6 +4,7 @@ import AddTask from "./componentes/AddTask";
 import Tasks from "./componentes/Tasks";
 import { v4 } from "uuid";
 import Header from "./componentes/Header";
+import Footer from "./componentes/Footer";
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -71,7 +72,7 @@ function App() {
   }
 
   return (
-    <div className="h-auto w-[1200px] bg-slate-500 flex justify-center p-6">
+    <div className="h-auto w-auto bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
         <Header>Gerenciador de Tarefas</Header>
         <hr />
@@ -82,6 +83,7 @@ function App() {
           onTaskClick={onTaskClick}
           onDeleteTaskClick={onDeleteTaskClick}
         />
+        <Footer>By MRS</Footer>
       </div>
     </div>
   );
